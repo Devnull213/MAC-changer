@@ -3,7 +3,7 @@
 import subprocess
 import re
 import argparse
-
+   
 
 def change_mac(interface, new_mac):
     ''' Change the virtual MAC by another
@@ -53,11 +53,14 @@ def change_mac(interface, new_mac):
         print('Program finished')
 
 
+
+
 parser = argparse.ArgumentParser()
 parser.description = 'This command let you change your wlan MAC address.'
 parser.add_argument('interface', help='Interface to change its MAC address.')
 parser.add_argument('mac', help='New MAC address.')
 args = parser.parse_args()
+
 
 change_mac(args.interface, args.mac)
 
